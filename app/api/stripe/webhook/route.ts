@@ -20,8 +20,6 @@
 
 import { NextRequest, NextResponse } from "next/server";
 
-export const runtime = "edge";
-
 const WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET;
 const STRIPE_SECRET = process.env.STRIPE_SECRET_KEY;
 

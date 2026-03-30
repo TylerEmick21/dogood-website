@@ -13,8 +13,6 @@
 
 import { NextRequest, NextResponse } from "next/server";
 
-export const runtime = "edge";
-
 const PORTAL_ID = process.env.NEXT_PUBLIC_HUBSPOT_PORTAL_ID;
 const FORM_ID = process.env.NEXT_PUBLIC_HUBSPOT_APPLY_FORM_ID;
 const TOKEN = process.env.HUBSPOT_PRIVATE_APP_TOKEN;
