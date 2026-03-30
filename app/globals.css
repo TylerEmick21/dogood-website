@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Custom Properties (Brand Tokens) ───────────────────────────── */
+:root {
+  /* Colors */
+  --color-coral:        #FF5344;
+  --color-coral-hover:  #E8402F;
+  --color-coral-light:  #FFF0EE;
+  --color-teal:         #00C6C0;
+  --color-teal-hover:   #00A8A3;
+  --color-teal-light:   #E6FAFA;
+  --color-sky:          #387CDE;
+  --color-marigold:     #FFBD00;
+  --color-black:        #000000;
+  --color-white:        #FFFFFF;
+  --color-gray-light:   #F2F2F2;
+  --color-gray-dark:    #7F7F7F;
+
+  /* Typography */
+  --font-sans:    "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  /* Spacing */
+  --section-padding-y:    96px;
+  --section-padding-y-sm: 64px;
+  --content-max-width:    1200px;
+}
+
+/* ── Base Styles ────────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans text-body text-brand-black bg-brand-white;
+  }
+
+  h1 { @apply text-display-lg font-bold leading-tight; }
+  h2 { @apply text-h2-sm font-semibold leading-snug md:text-h2; }
+  h3 { @apply text-h3-sm font-semibold leading-snug md:text-h3; }
+  p  { @apply text-body text-brand-black/80 leading-relaxed; }
+
+  a  { @apply transition-colors duration-200; }
+}
+
+/* ── Component Layer Utilities ──────────────────────────────────────── */
+@layer components {
+  /* Section wrapper */
+  .section-container {
+    @apply w-full max-w-content mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section padding */
+  .section-y {
+    @apply py-section-sm md:py-section;
+  }
+
+  /* Focus ring (accessibility) */
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-coral focus-visible:ring-offset-2;
+  }
+}

@@ -1,0 +1,6 @@
+name = "dogood-website"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# OpenNext Cloudflare build output
+pages_build_output_dir = ".open-next/assets"
