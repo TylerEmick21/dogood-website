@@ -46,7 +46,10 @@ export function middleware(req: NextRequest) {
   // During development, bypass auth so portal pages are accessible
   const isDev = process.env.NODE_ENV === "development";
 
-  if (!isAuthenticated && !isDev) {
+  // Set DEMO_MODE=true in Cloudflare env vars to allow portal access without auth
+  const isDemoMode = process.env.DEMO_MODE === "true";
+
+  if (!isAuthenticated && !isDev && !isDemoMode) {
     const loginUrl = new URL("/login", req.url);
     // Pass the intended destination so login can redirect back
     loginUrl.searchParams.set("redirect", pathname);

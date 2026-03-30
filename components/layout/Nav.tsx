@@ -144,6 +144,12 @@ export function Nav() {
 
         {/* Desktop CTAs */}
         <div className="hidden lg:flex lg:items-center lg:gap-3">
+          <Link
+            href="/portal/dashboard"
+            className="text-body font-medium text-teal hover:text-teal-hover transition-colors focus-ring rounded-sm"
+          >
+            View Demo ↗
+          </Link>
           <Button href="/login" variant="secondary" size="sm">
             Client Login
           </Button>
@@ -208,6 +214,13 @@ export function Nav() {
               <Button href="/login" variant="secondary" className="w-full justify-center" onClick={() => setMobileOpen(false)}>
                 Client Login
               </Button>
+              <Link
+                href="/portal/dashboard"
+                onClick={() => setMobileOpen(false)}
+                className="block text-center py-2 text-base font-medium text-teal hover:text-teal-hover transition-colors"
+              >
+                View Demo ↗
+              </Link>
             </div>
           </div>
         </div>
